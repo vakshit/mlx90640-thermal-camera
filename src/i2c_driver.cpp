@@ -13,7 +13,7 @@
 
 #include <sys/ioctl.h>
 
-#include <ros-noetic-mlx90640/i2c_driver.h>
+#include <mlx90640-thermal-camera/i2c_driver.h>
 
 I2CDriver::I2CDriver() {}
 

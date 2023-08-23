@@ -1,1 +1,1 @@
-# ros-noetic-mlx90640
+# mlx90640-thermal-camera

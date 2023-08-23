@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(ros-noetic-mlx90640)
+project(mlx90640-thermal-camera)
 
 set(CMAKE_BUILD_TYPE Release)
 
@@ -107,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
  INCLUDE_DIRS
   include
-#  LIBRARIES ros-noetic-mlx90640
+#  LIBRARIES mlx90640-thermal-camera
  CATKIN_DEPENDS
   cv_bridge
   roscpp
@@ -128,7 +128,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/ros-noetic-mlx90640.cpp
+#   src/${PROJECT_NAME}/mlx90640-thermal-camera.cpp
 # )
 
 ## Add cmake target dependencies of the library

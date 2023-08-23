@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ros-noetic-mlx90640</name>
+  <name>mlx90640-thermal-camera</name>
   <version>1.0.0</version>
-  <description>The ros-noetic-mlx90640 package</description>
+  <description>The mlx90640-thermal-camera package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
@@ -20,7 +20,7 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/ros-noetic-mlx90640</url> -->
+  <!-- <url type="website">http://wiki.ros.org/mlx90640-thermal-camera</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
