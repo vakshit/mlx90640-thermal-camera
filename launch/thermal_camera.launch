@@ -1,6 +1,7 @@
 <launch>
   <arg name="fps" default="32" />             <!-- Possible values of fps are 1, 2, 4, 8, 16, 32, 64 -->
-  <arg name="upscale_factor" default="20" />  <!-- Upscale factor with which to bicubically scale the image -->
+  <arg name="upscale_factor" default="20" />  <!-- Upscale factor with which to bicubically scale the
+  image -->
 
   <node name="mlx90640" pkg="ros-noetic-mlx90640" type="mlx90640" output="screen">
     <param name="fps" value="$(arg fps)" />

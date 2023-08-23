@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(ros-noetic-mlx90640)
 
+set(CMAKE_BUILD_TYPE Release)
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -228,4 +230,14 @@ target_include_directories(mlx90640
 
 add_dependencies(mlx90640
   ${catkin_EXPORTED_TARGETS}
+)
+
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
+
+install(TARGETS mlx90640
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
