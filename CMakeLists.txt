@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(mlx90640-thermal-camera)
+project(mlx90640_thermal_camera)
 
 set(CMAKE_BUILD_TYPE Release)
 

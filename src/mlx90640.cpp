@@ -1,4 +1,4 @@
-#include <mlx90640-thermal-camera/mlx90640.h>
+#include <mlx90640_thermal_camera/mlx90640.h>
 
 MLX90640::MLX90640(int fps) {
   this->fps = fps;

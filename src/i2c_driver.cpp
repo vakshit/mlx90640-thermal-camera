@@ -12,7 +12,7 @@
 
 #include <sys/ioctl.h>
 
-#include <mlx90640-thermal-camera/i2c_driver.h>
+#include <mlx90640_thermal_camera/i2c_driver.h>
 
 I2CDriver::I2CDriver() {}
 

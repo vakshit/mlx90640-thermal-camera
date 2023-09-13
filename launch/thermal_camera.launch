@@ -3,7 +3,7 @@
   <arg name="upscale_factor" default="20" />  <!-- Upscale factor with which to bicubically scale the
   image -->
 
-  <node name="mlx90640" pkg="mlx90640-thermal-camera" type="mlx90640" output="screen">
+  <node name="mlx90640" pkg="mlx90640_thermal_camera" type="mlx90640" output="screen">
     <param name="fps" value="$(arg fps)" />
     <param name="upscale_factor" value="$(arg upscale_factor)" />
   </node>

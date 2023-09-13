@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>mlx90640-thermal-camera</name>
+  <name>mlx90640_thermal_camera</name>
   <version>1.0.0</version>
-  <description>The mlx90640-thermal-camera package</description>
+  <description>The mlx90640_thermal_camera package</description>
 
   <maintainer email="jadit19@gmail.com">Adit Jain</maintainer>
   <maintainer email="akshitv18@gmail.com">Akshit Verma</maintainer>

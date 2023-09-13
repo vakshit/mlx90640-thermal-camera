@@ -2,7 +2,7 @@
 #include <sensor_msgs/Image.h>
 #include <std_msgs/Float32.h>
 
-#include <mlx90640-thermal-camera/mlx90640.h>
+#include <mlx90640_thermal_camera/mlx90640.h>
 
 int FPS;
 int UPSCALE_FACTOR;

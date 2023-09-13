@@ -4,8 +4,8 @@
 #include <iostream>
 #include <math.h>
 
-#include <mlx90640-thermal-camera/i2c_driver.h>
-#include <mlx90640-thermal-camera/params.h>
+#include <mlx90640_thermal_camera/i2c_driver.h>
+#include <mlx90640_thermal_camera/params.h>
 
 #define MLX_I2C_ADDR 0x33
 #define SENSOR_W 24
