@@ -5,7 +5,6 @@
 #include <string.h>
 #include <unistd.h>
 
-//#define I2C_MSG_FMT char
 #ifndef I2C_FUNC_I2C
 #include <linux/i2c.h>
 #define I2C_MSG_FMT __u8
@@ -45,8 +44,6 @@ int I2CDriver::read(uint8_t slaveAddr, uint16_t startAddress,
   i2c_messages[1].flags = I2C_M_RD | I2C_M_NOSTART;
   i2c_messages[1].len = nMemAddressRead * 2;
   i2c_messages[1].buf = (I2C_MSG_FMT *)buf;
-  // result = write(i2c_fd, cmd, 3);
-  // result = read(i2c_fd, buf, nMemAddressRead*2);
   i2c_messageset[0].msgs = i2c_messages;
   i2c_messageset[0].nmsgs = 2;
 

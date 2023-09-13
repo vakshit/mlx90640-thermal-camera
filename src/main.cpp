@@ -34,6 +34,7 @@ void constructNormalizedThermalImage(float minTemp, float maxTemp) {
 }
 
 int main(int argc, char **argv) {
+  rawThermalImage = (float *)malloc(SENSOR_W * SENSOR_H * sizeof(float));
   ros::init(argc, argv, "mlx90640");
   ros::NodeHandle nh("~");
 
@@ -50,13 +51,11 @@ int main(int argc, char **argv) {
       nh.advertise<std_msgs::Float32>("/mlx90640/temperature/min", FPS);
   ros::Publisher maxTempPub =
       nh.advertise<std_msgs::Float32>("/mlx90640/temperature/max", FPS);
-  // ros::Publisher rawThermalImagePub =
-  //     nh.advertise<float *>("/mlx90640/image/raw", FPS);
   ros::Publisher normalizedThermalImagePub =
       nh.advertise<sensor_msgs::Image>("/mlx90640/image/normalized", FPS);
   ros::Rate loopRate(FPS);
 
-  MLX90640 thermalCamera = MLX90640(FPS);
+  MLX90640 thermalCamera(FPS);
   std_msgs::Float32 minTemp, maxTemp;
 
   while (ros::ok()) {
@@ -68,11 +67,8 @@ int main(int argc, char **argv) {
     maxTemp.data = thermalCamera.getMax();
     constructNormalizedThermalImage(minTemp.data, maxTemp.data);
 
-    minTemp.data = 1.0;
-    maxTemp.data = 100.0;
     minTempPub.publish(minTemp);
     maxTempPub.publish(maxTemp);
-    // rawThermalImagePub.publish(rawThermalImage);
     normalizedThermalImagePub.publish(normalizedThermalImage);
 
     loopRate.sleep();
